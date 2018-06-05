@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context="com.guti.agus.rusodnd.MainActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+    <ImageButton
+        android:id="@+id/d20.bttn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="53dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="@android:color/background_dark"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerAmbiente"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/d20" />
+
+    <ImageButton
+        android:id="@+id/d12.bttn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="@android:color/background_dark"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/d20.bttn"
+        app:layout_constraintStart_toEndOf="@+id/d8.bttn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/d12" />
+
+    <ImageButton
+        android:id="@+id/d8.bttn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="19dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="@android:color/background_dark"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/visor.txt"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/d8"
+        tools:layout_editor_absoluteX="251dp" />
+
+    <ImageButton
+        android:id="@+id/d6.bttn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="205dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="@android:color/background_dark"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/d8.bttn"
+        app:layout_constraintStart_toEndOf="@+id/d4.bttn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/d6" />
+
+    <ImageButton
+        android:id="@+id/d4.bttn"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="61dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:background="@android:color/background_dark"
+        android:padding="1dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/play_ambiente_bttn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/d4" />
+
+    <TextView
+        android:id="@+id/visor.txt"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="43dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="106dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="45sp"
+        app:layout_constraintBottom_toTopOf="@+id/clr_bttn"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerAmbiente"
+        app:layout_constraintStart_toEndOf="@+id/play_ambiente_bttn" />
+
+    <ImageButton
+        android:id="@+id/play_ambiente_bttn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="12dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/play_clima_bttn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <Spinner
+        android:id="@+id/spinnerAmbiente"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/darker_gray"
+        android:entries="@android:color/holo_red_dark"
+        android:popupBackground="@android:color/darker_gray"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerClima"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/clr_bttn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:layout_marginStart="90dp"
+        android:text="Limpiar"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/play_clima_bttn" />
+
+    <ImageButton
+        android:id="@+id/play_clima_bttn"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <Spinner
+        android:id="@+id/spinnerClima"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="58dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/clr_bttn" />
+
+</android.support.constraint.ConstraintLayout>
